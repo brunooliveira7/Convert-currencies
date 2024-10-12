@@ -40,15 +40,18 @@ form.onsubmit = (event) => {
 };
 
 //function para converter a moeda com 3 parâmetros
-function convertCurrency(amount, prince, symbol) {
+function convertCurrency(amount, price, symbol) {
   try {
     //muda o texto da primeira linha do footer - cotação
-    description.textContent = `${symbol} 1 = ${formatCurrencyBRL(prince)}`;
+    description.textContent = `${symbol} 1 = ${formatCurrencyBRL(price)}`;
 
     //calcula o total para exibir no resltudo
-    let total = amount * prince;
+    let total = amount * price;
+    //arredonda para duas casas decimais
+    total = total.toFixed(2);
+    total = formatCurrencyBRL(total).replace("R$", "");
     //muda o texto do resultado - total da conversão
-    result.textContent = total;
+    result.textContent = `${total} Reais`;
 
     //aplica a class que mostra o footer - resultado
     footer.classList.add("show-result");
