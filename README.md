@@ -1,7 +1,7 @@
 <h1 align="center"> Convert currencies </h1>
 
 <p align="center">
-Permite que os usuários calculem o valor das principais moedas estrangeiras em Reais, utilizando taxas de câmbio atualizadas. Site disponível em: https://brunooliveira7.github.io/Convert-currencies/
+Permite que os usuários calculem o valor das principais moedas estrangeiras em Reais, utilizando taxas de câmbio atualizadas. Site disponível em: https://brunooliveira7.github.io/Convert-currencies
 </p>
 
 <p align="center">
