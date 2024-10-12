@@ -3,6 +3,7 @@ const currency = document.getElementById("currency"); //select
 const form = document.querySelector("form");
 const footer = document.querySelector("main footer");
 const description = document.getElementById("description");
+const result = document.getElementById("result");
 
 //cotação de moedas
 const USD = 5.48;
@@ -43,6 +44,11 @@ function convertCurrency(amount, prince, symbol) {
   try {
     //muda o texto da primeira linha do footer - cotação
     description.textContent = `${symbol} 1 = ${formatCurrencyBRL(prince)}`;
+
+    //calcula o total para exibir no resltudo
+    let total = amount * prince;
+    //muda o texto do resultado - total da conversão
+    result.textContent = total;
 
     //aplica a class que mostra o footer - resultado
     footer.classList.add("show-result");
