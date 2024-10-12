@@ -11,7 +11,7 @@ Permite que os usuários calculem o valor das principais moedas estrangeiras em 
 </p>
 
 <p align="center">
-  <img alt="License" src="">
+  <img alt="License" src="https://github.com/brunooliveira7/Convert-currencies/blob/master/img/Layout%20Convert-currencies.png">
 </p>
 
 <br>
