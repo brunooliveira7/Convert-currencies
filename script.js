@@ -1,7 +1,8 @@
-const amount = document.getElementById("amount");
-const currency = document.getElementById("currency");
+const amount = document.getElementById("amount"); //input
+const currency = document.getElementById("currency"); //select
 const form = document.querySelector("form");
 const footer = document.querySelector("main footer");
+const description = document.getElementById("description");
 
 //cotação de moedas
 const USD = 5.48;
@@ -26,7 +27,7 @@ form.onsubmit = (event) => {
   //verifica a moeda selecionada e converte
   switch (currency.value) {
     case "USD":
-      convertCurrency(amount.value, USD, "US$");
+      convertCurrency(amount.value, USD, "US$"); //add footer
       break;
     case "EUR":
       convertCurrency(amount.value, EUR, "€");
@@ -37,16 +38,28 @@ form.onsubmit = (event) => {
   }
 };
 
-//function para converter a moeda
+//function para converter a moeda com 3 parâmetros
 function convertCurrency(amount, prince, symbol) {
   try {
-    //aplica a class que mostra o footer
-    footer.classList.add("show-result")
+    //muda o texto da primeira linha do footer - cotação
+    description.textContent = `${symbol} 1 = ${formatCurrencyBRL(prince)}`;
 
+    //aplica a class que mostra o footer - resultado
+    footer.classList.add("show-result");
   } catch (error) {
-    //remove a class do footer - removendo da tela
+    //se der errado - remove a class do footer - removendo da tela
     footer.classList.remove("show-result");
+
     console.log(error);
-    alert("Não foi possível converter. Tente novamente mais tarde");
+    alert("Não foi possível converter. Tente novamente mais tarde.");
   }
+}
+
+//formata a moeda em real
+function formatCurrencyBRL(value) {
+  //converte para número e formata (toLocaleString) para R$
+  return Number(value).toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 }
