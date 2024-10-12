@@ -1,7 +1,7 @@
 <h1 align="center"> Convert currencies </h1>
 
 <p align="center">
-Permite que os usuários calculem o valor das principais moedas estrangeiras em reais, utilizando taxas de câmbio atualizadas. Site disponível em: https://brunooliveira7.github.io/GitHub-favorites/
+Permite que os usuários calculem o valor das principais moedas estrangeiras em Reais, utilizando taxas de câmbio atualizadas. Site disponível em: https://brunooliveira7.github.io/Convert-currencies/
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@ Projeto desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Inclui uma interface simples, onde o usuário seleciona a moeda de origem, insere o valor, e o aplicativo converte automaticamente para reais.
+Inclui uma interface simples, onde o usuário seleciona a moeda de origem, insere o valor, e o aplicativo converte automaticamente para Reais.
 
 ## :memo: Licença
 
