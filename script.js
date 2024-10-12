@@ -47,9 +47,17 @@ function convertCurrency(amount, price, symbol) {
 
     //calcula o total para exibir no resltudo
     let total = amount * price;
+
+    //verifica se o total é um número
+    if (isNaN(total)) {
+        return alert("Por favor, digite o valor corretamente para converter.");
+    }
+
     //arredonda para duas casas decimais
     total = total.toFixed(2);
+    //formata o valor total e retira o R$
     total = formatCurrencyBRL(total).replace("R$", "");
+
     //muda o texto do resultado - total da conversão
     result.textContent = `${total} Reais`;
 
